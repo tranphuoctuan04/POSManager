@@ -1,0 +1,74 @@
+﻿<#@ template language="C#" debug="True" hostspecific="true" #>
+<#@ output extension="js" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="EnvDTE" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="EnvDTE" #>
+<#
+    var serviceProvider = Host as IServiceProvider;
+    if (serviceProvider == null)
+    {
+        throw new InvalidOperationException("Host is not IServiceProvider");
+    }
+
+    var dte = serviceProvider.GetService(typeof(DTE)) as DTE;
+    if (dte == null)
+    {
+        throw new InvalidOperationException("Unable to resolve DTE");
+    }
+
+    var project = dte.Solution.Projects
+                              .OfType<Project>()
+                              .Single(p => p.Name == "ASP_TestTool");
+
+    var model = project.CodeModel
+                       .CodeTypeFromFullName("ASP_TestTool.Models.Hanghoa")
+                   as CodeClass;
+    //might want to have a list / find all items matching some rule
+
+#>
+var <#= Char.ToLowerInvariant(model.Name[0])
+        + model.Name.Remove(0, 1).Replace("Model", "ViewModel") #>= {
+<#
+    foreach (var property in model.Members.OfType<CodeProperty>())
+    {
+        var minLength = property.Attributes
+                                    .OfType<CodeAttribute>()
+                                    .FirstOrDefault(a => a.Name == "MinLength");
+        var required = property.Attributes
+                               .OfType<CodeAttribute>()
+                               .FirstOrDefault(a => a.Name == "Required");
+
+        var koAttributes = new List<String>();
+        if (minLength != null)
+		{
+			var para = minLength.Value.Split(new string[] {","},StringSplitOptions.RemoveEmptyEntries);
+			var para0 = para[0].Contains("=")?para[0].Split(new string[] {"="},StringSplitOptions.RemoveEmptyEntries)[1]:para[0];
+			var para1 = para[1].Contains("=")?para[1].Split(new string[] {"="},StringSplitOptions.RemoveEmptyEntries)[1]:para[1]; 
+			koAttributes.Add("minLength: {params:" + para0.Trim() + ", message:"+para1.Trim() +"}");
+		}
+        if (required != null)
+		{
+			//Write("This is require: " + required.Value);
+			var para = required.Value.Split('=')[1];
+			//Write("Para: " + para);
+
+			// required: { params: true, message: "require" }
+            koAttributes.Add("required: {params: true, message:" + para + "}");
+			//Write("required: {params: true, message:" + para + "}");
+		}
+#>
+
+    <#= property.Name #> : ko.observable(<#= property.Name #>).extend({<#=
+String.Join(", ", koAttributes) #>}),
+<#
+    }
+#>
+}
+
+<# 
+for(int i=0;i<=10;i++){
+
+}
+#>
