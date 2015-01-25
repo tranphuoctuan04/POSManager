@@ -1,2 +1,2 @@
 # POSManager
-POS Manager
+Quản lý bán hàng
