@@ -69,8 +69,6 @@ namespace Cs_Console_Text
         public int ProfessorId { get; set; }
         public string ProfessorName { get; set; }
 
-        [Required(ErrorMessage = "Are you sure you want to ... Professor")]
-        public bool FcktheProfessor { get; set; }
     }
 
     class Program
