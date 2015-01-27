@@ -1,0 +1,9 @@
+D:\Proj\VSW2013\POSManager\GenTool\GenLib.cs\bin\Debug\GenLib.dll
+D:\Proj\VSW2013\POSManager\GenTool\GenLib.cs\bin\Debug\GenLib.pdb
+D:\Proj\VSW2013\POSManager\GenTool\GenLib.cs\obj\Debug\GenLib.dll
+D:\Proj\VSW2013\POSManager\GenTool\GenLib.cs\obj\Debug\GenLib.pdb
+D:\Proj\VSW2013\POSManager\GenTool\GenLib\bin\Debug\GenLib.dll
+D:\Proj\VSW2013\POSManager\GenTool\GenLib\bin\Debug\GenLib.pdb
+D:\Proj\VSW2013\POSManager\GenTool\GenLib\obj\Debug\GenLib.csprojResolveAssemblyReference.cache
+D:\Proj\VSW2013\POSManager\GenTool\GenLib\obj\Debug\GenLib.dll
+D:\Proj\VSW2013\POSManager\GenTool\GenLib\obj\Debug\GenLib.pdb

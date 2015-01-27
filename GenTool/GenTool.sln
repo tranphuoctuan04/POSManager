@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenTool", "GenTool\GenTool.csproj", "{008507DC-AA33-4761-BE05-60F321077E2B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenView", "GenView\GenView.csproj", "{82B32E39-29E4-454F-B141-02D08BFD69B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenLibTest", "GenLibTest\GenLibTest.csproj", "{F272ABC6-2752-45A3-91AF-2C29F8E40ECA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenLib", "GenLib\GenLib.csproj", "{4F5CEE35-559B-4B75-AF7F-CB092734606C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{82B32E39-29E4-454F-B141-02D08BFD69B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82B32E39-29E4-454F-B141-02D08BFD69B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82B32E39-29E4-454F-B141-02D08BFD69B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F272ABC6-2752-45A3-91AF-2C29F8E40ECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F272ABC6-2752-45A3-91AF-2C29F8E40ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F272ABC6-2752-45A3-91AF-2C29F8E40ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F272ABC6-2752-45A3-91AF-2C29F8E40ECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F5CEE35-559B-4B75-AF7F-CB092734606C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F5CEE35-559B-4B75-AF7F-CB092734606C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F5CEE35-559B-4B75-AF7F-CB092734606C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F5CEE35-559B-4B75-AF7F-CB092734606C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

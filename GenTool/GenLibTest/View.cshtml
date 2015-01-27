@@ -1,7 +1,4 @@
-﻿<#@ template language="C#" extension=".cshtml" #>
-<#@ import namespace="System.Collections.Generic" #>
-
-@model YourNamespace.Models.<#= TableName #>
+﻿@model YourNamespace.Models.HocSinh
 
 @{
     ViewBag.Title = "YourTitle";
@@ -36,9 +33,9 @@
 
     <div class="span4">
         <div class="w-box-header">
-            <span class="glyphicon glyphicon-th-list"></span> &nbsp;Danh sách <#= TableName #>(<span data-bind="html: CountSearch() + '/' + List().length"></span>)
+            <span class="glyphicon glyphicon-th-list"></span> &nbsp;Danh sách HocSinh(<span data-bind="html: CountSearch() + '/' + List().length"></span>)
             <span class="pull-right" style="align-self:stretch">
-                <a class="btn btn-success" id="btnModalCreate" data-toggle="modal" data-target="#modal" data-bind="click: Create<#= TableName #>">
+                <a class="btn btn-success" id="btnModalCreate" data-toggle="modal" data-target="#modal" data-bind="click: CreateHocSinh">
                     <i class="icon-plus icon-white"></i>
                 </a>
             </span>
@@ -56,13 +53,11 @@
                             <table class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
-                                        <# if(Headers != null) {
-                                        for(int i = 1; i < Headers.Length; i++) {
-                                        #><th class="span1"><#= Headers[i] #></th>
-                                        <#
-                                            }
-                                        }
-                                        #><th class="span1">Sửa</th>
+                                        <th class="span1">@Html.LabelFor(x => x.HocSinhId)</th>
+                                        <th class="span1">@Html.LabelFor(x => x.TenHocSinh)</th>
+                                        <th class="span1">@Html.LabelFor(x => x.Phai)</th>
+                                        <th class="span1">@Html.LabelFor(x => x.Lop)</th>
+                                        <th class="span1">Sửa</th>
                                     </tr>
                                 </thead>
                                 <tbody data-bind="template: { name: 'RowItem', foreach: List }"></tbody>
@@ -80,15 +75,12 @@
 
         <script id="RowItem" type="text/html">
             <tr data-bind="css: { normalrow: (($index() % 2) == 0), alternativerow: ($index() % 2 != 0) }, visible: IsVisible() == true">
-                <td style="font-weight: bold;"><a style="cursor: pointer" data-bind="click: $root.btnSetCurrent"><span data-bind="html: <#= Headers[1] #>"></span></a></td>
-                <#
-                for(int i = 1; i < Headers.Length; i++) {
-                #><td data-bind="html: <#= Headers[i] #>"></td>
-                <#
-                }
-                #>
-                <td style="text-align: right;">
-                    <button class="btn btn-warning" title="Edit <#= TableName #>" data-bind="value: <#= Headers[0] #>, click: $root.Edit<#= TableName #>" id="btnModalCreate" data-toggle="modal" data-target="#modal" style="width:100%">
+                <td style="font-weight: bold;"><a style="cursor: pointer" data-bind="click: $root.btnSetCurrent"><span data-bind="html: HocSinhId"></span></a></td>
+                <td data-bind="html: TenHocSinh"></td>
+                <td data-bind="html: Phai"></td>
+                <td data-bind="html: Lop"></td>
+                                <td style="text-align: right;">
+                    <button class="btn btn-warning" title="Edit HocSinh" data-bind="value: HocSinhId, click: $root.EditHocSinh" id="btnModalCreate" data-toggle="modal" data-target="#modal" style="width:100%">
                         <i class="icon-edit icon-white"></i>
                     </button>
                 </td>
@@ -110,17 +102,18 @@
                         <div class="table-responsive">
                             <table class="table table-bordered table-striped" border="1">
                                 <tbody>
-                                    <#
-                                    for(int i = 0; i < Headers.Length; i++) {
-                                    #><tr><td><#= Headers[i] #></td><td data-bind="html: <#= Headers[i] #>"></td></tr>
-                                    <# } #><tr>
+                                    <tr><td>@Html.LabelFor(x => x.HocSinhId)</td><td data-bind="html: HocSinhId"></td></tr>
+                                    <tr><td>@Html.LabelFor(x => x.TenHocSinh)</td><td data-bind="html: TenHocSinh"></td></tr>
+                                    <tr><td>@Html.LabelFor(x => x.Phai)</td><td data-bind="html: Phai"></td></tr>
+                                    <tr><td>@Html.LabelFor(x => x.Lop)</td><td data-bind="html: Lop"></td></tr>
+                                    <tr>
                                         <td>
-                                            Chức năng
+                                            Chức năng   
                                         </td>
                                         <td>
                                             <form id="formDelete">
-                                                <input data-bind="value: <#= Headers[0] #>" type="text" style="display:none" name="<#= Headers[0] #>" />
-                                                <button type="button" class="btn btn-danger" data-bind="click: $root.Delete<#= TableName #>Submit">Xóa</button>
+                                                <input data-bind="value: HocSinhId" type="text" style="display:none" name="HocSinhId" />
+                                                <button type="button" class="btn btn-danger" data-bind="click: $root.DeleteHocSinhSubmit">Xóa</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -137,34 +130,51 @@
     <div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="myModalLabel">Thêm <#= TableName #></h3>
+            <h3 id="myModalLabel">Thêm HocSinh</h3>
         </div>
         <div class="modal-body">
-            <form class="form-horizontal" method="post" action="<#= TableName #>/Create" id="form">
+            <form class="form-horizontal" method="post" action="HocSinh/Create" id="form">
                 <!--Begin Form-->
                 @Html.ValidationSummary(true)
-            <#
-            if(Headers != null) {
-            for(int i = 0; i < Headers.Length; i++) {
-            #>  <div class="control-group">
-                <label class="control-label"><#= Headers[i] #></label>
+              <div class="control-group">
+				@Html.LabelFor(model => model.HocSinhId, new { @class = "control-label" })
                     <div class="controls">
-                        @Html.TextBoxFor(model => model.<#= Headers[i] #>, new { @class = "span12", placeholder = "<#= Headers[i] #>", id = "<#= Headers[i] #>Edit" })
-                        <span class="text-error">@Html.ValidationMessageFor(model => model.<#= Headers[i] #>)</span>
+                        @Html.TextBoxFor(model => model.HocSinhId, new { @class = "span12", placeholder = "HocSinhId", id = "HocSinhIdEdit", data_bind="value: val.HocSinhId" })
+                        <!--<span class="text-error">@Html.ValidationMessageFor(model => model.HocSinhId)</span> -->
                     </div>
                 </div>
-            <# 
-            } }
-            #></form> <!--End Form-->
+              <div class="control-group">
+				@Html.LabelFor(model => model.TenHocSinh, new { @class = "control-label" })
+                    <div class="controls">
+                        @Html.TextBoxFor(model => model.TenHocSinh, new { @class = "span12", placeholder = "TenHocSinh", id = "TenHocSinhEdit", data_bind="value: val.TenHocSinh" })
+                        <!--<span class="text-error">@Html.ValidationMessageFor(model => model.TenHocSinh)</span> -->
+                    </div>
+                </div>
+              <div class="control-group">
+				@Html.LabelFor(model => model.Phai, new { @class = "control-label" })
+                    <div class="controls">
+                        @Html.TextBoxFor(model => model.Phai, new { @class = "span12", placeholder = "Phai", id = "PhaiEdit", data_bind="value: val.Phai" })
+                        <!--<span class="text-error">@Html.ValidationMessageFor(model => model.Phai)</span> -->
+                    </div>
+                </div>
+              <div class="control-group">
+				@Html.LabelFor(model => model.Lop, new { @class = "control-label" })
+                    <div class="controls">
+                        @Html.TextBoxFor(model => model.Lop, new { @class = "span12", placeholder = "Lop", id = "LopEdit", data_bind="value: val.Lop" })
+                        <!--<span class="text-error">@Html.ValidationMessageFor(model => model.Lop)</span> -->
+                    </div>
+                </div>
+            </form> <!--End Form-->
         </div>
         <div class="modal-footer">
             <button class="btn btncloseModal" data-dismiss="modal" aria-hidden="true">Đóng</button>
-            <button class="btn btn-primary" data-bind="click: Create<#= TableName #>Submit" id="btnCreate">Tạo <#= TableName #></button>
-            <button class="btn btn-primary" data-bind="click: Edit<#= TableName #>Submit" id="btnEdit">Sửa <#= TableName #></button>
+            <button class="btn btn-primary" data-bind="click: CreateHocSinhSubmit" id="btnCreate">Tạo HocSinh</button>
+            <button class="btn btn-primary" data-bind="click: EditHocSinhSubmit" id="btnEdit">Sửa HocSinh</button>
         </div>
     </div>
 
 </div>
 
-<script src="~/Scripts/Insite/Views/<#= TableName #>/<#= TableName #>Model.js"></script>
-<script src="~/Scripts/Insite/Views/<#= TableName #>/<#= TableName #>ViewModel.js"></script>
+<script src="~/Scripts/Insite/Views/HocSinh/HocSinhModelValidation.js"></script>
+<script src="~/Scripts/Insite/Views/HocSinh/HocSinhModel.js"></script>
+<script src="~/Scripts/Insite/Views/HocSinh/HocSinhViewModel.js"></script>

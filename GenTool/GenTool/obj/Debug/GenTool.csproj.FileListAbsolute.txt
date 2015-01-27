@@ -43,3 +43,14 @@ C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenTool\obj\Debug\GenTool.cspr
 D:\GIT\POSManager\POSManager\GenTool\GenTool\bin\Debug\GenTool.exe.config
 D:\GIT\POSManager\POSManager\GenTool\GenTool\obj\Debug\GenTool.exe
 D:\GIT\POSManager\POSManager\GenTool\GenTool\obj\Debug\GenTool.pdb
+D:\Proj\VSW2013\POSManager\GenTool\GenTool\bin\Debug\GenTool.exe.config
+D:\Proj\VSW2013\POSManager\GenTool\GenTool\obj\Debug\GenTool.exe
+D:\Proj\VSW2013\POSManager\GenTool\GenTool\obj\Debug\GenTool.pdb
+D:\Proj\VSW2013\POSManager\GenTool\GenTool\bin\Debug\GenTool.exe
+D:\Proj\VSW2013\POSManager\GenTool\GenTool\bin\Debug\GenTool.pdb
+D:\Proj\VSW2013\POSManager\GenTool\GenTool\bin\Debug\GenView.dll
+D:\Proj\VSW2013\POSManager\GenTool\GenTool\bin\Debug\GenView.pdb
+D:\Proj\VSW2013\POSManager\GenTool\GenTool\obj\Debug\GenTool.csprojResolveAssemblyReference.cache
+D:\Proj\VSW2013\POSManager\GenTool\GenTool\obj\Debug\GenTool.Form1.resources
+D:\Proj\VSW2013\POSManager\GenTool\GenTool\obj\Debug\GenTool.Properties.Resources.resources
+D:\Proj\VSW2013\POSManager\GenTool\GenTool\obj\Debug\GenTool.csproj.GenerateResource.Cache

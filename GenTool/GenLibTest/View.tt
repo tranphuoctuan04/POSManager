@@ -1,0 +1,9 @@
+﻿<#@ assembly name="$(SolutionDir)GenLib/bin/Debug/GenLib.dll" #>
+<#
+    // Co the copy vao chung thu muc project. Khi do thi: name="$(ProjectDir)GenLib.dll"
+#>
+<#@ import namespace="GenLib" #>
+<#@ output extension="cshtml" #>
+<#=
+    GenLib.GenCode(typeof(ViewTemplate), "HocSinh", "HocSinhId", "TenHocSinh", "Phai", "Lop")
+#>

@@ -18,3 +18,8 @@ C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\bin\Debug\GenView.pdb
 C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\obj\Debug\GenView.csprojResolveAssemblyReference.cache
 C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\obj\Debug\GenView.dll
 C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\obj\Debug\GenView.pdb
+D:\Proj\VSW2013\POSManager\GenTool\GenView\bin\Debug\GenView.dll
+D:\Proj\VSW2013\POSManager\GenTool\GenView\bin\Debug\GenView.pdb
+D:\Proj\VSW2013\POSManager\GenTool\GenView\obj\Debug\GenView.csprojResolveAssemblyReference.cache
+D:\Proj\VSW2013\POSManager\GenTool\GenView\obj\Debug\GenView.dll
+D:\Proj\VSW2013\POSManager\GenTool\GenView\obj\Debug\GenView.pdb

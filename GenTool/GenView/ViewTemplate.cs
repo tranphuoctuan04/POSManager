@@ -16,7 +16,7 @@ namespace GenView
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+    #line 1 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "12.0.0.0")]
     public partial class ViewTemplate : ViewTemplateBase
     {
@@ -28,7 +28,7 @@ namespace GenView
         {
             this.Write("@model YourNamespace.Models.");
             
-            #line 3 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 3 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
@@ -55,7 +55,7 @@ namespace GenView
                     "ass=\"w-box-header\">\r\n            <span class=\"glyphicon glyphicon-th-list\"></spa" +
                     "n> &nbsp;Danh sách ");
             
-            #line 38 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 38 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
@@ -64,7 +64,7 @@ namespace GenView
             <span class=""pull-right"" style=""align-self:stretch"">
                 <a class=""btn btn-success"" id=""btnModalCreate"" data-toggle=""modal"" data-target=""#modal"" data-bind=""click: Create");
             
-            #line 40 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 40 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
@@ -89,7 +89,7 @@ namespace GenView
                                     <tr>
                                         ");
             
-            #line 58 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 58 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
  if(Headers != null) {
                                         for(int i = 0; i < Headers.Length; i++) {
                                         
@@ -98,14 +98,14 @@ namespace GenView
             #line hidden
             this.Write("<th class=\"span1\">@Html.LabelFor(x => x.");
             
-            #line 60 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 60 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Headers[i]));
             
             #line default
             #line hidden
             this.Write(")</th>\r\n                                        ");
             
-            #line 61 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 61 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
 
                                             }
                                         }
@@ -133,14 +133,14 @@ namespace GenView
             <tr data-bind=""css: { normalrow: (($index() % 2) == 0), alternativerow: ($index() % 2 != 0) }, visible: IsVisible() == true"">
                 <td style=""font-weight: bold;""><a style=""cursor: pointer"" data-bind=""click: $root.btnSetCurrent""><span data-bind=""html: ");
             
-            #line 82 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 82 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Headers[0]));
             
             #line default
             #line hidden
             this.Write("\"></span></a></td>\r\n                ");
             
-            #line 83 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 83 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
 
                 for(int i = 1; i < Headers.Length; i++) {
                 
@@ -149,14 +149,14 @@ namespace GenView
             #line hidden
             this.Write("<td data-bind=\"html: ");
             
-            #line 85 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 85 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Headers[i]));
             
             #line default
             #line hidden
             this.Write("\"></td>\r\n                ");
             
-            #line 86 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 86 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
 
                 }
                 
@@ -166,21 +166,21 @@ namespace GenView
             this.Write("                <td style=\"text-align: right;\">\r\n                    <button clas" +
                     "s=\"btn btn-warning\" title=\"Edit ");
             
-            #line 90 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 90 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
             #line hidden
             this.Write("\" data-bind=\"value: ");
             
-            #line 90 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 90 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Headers[0]));
             
             #line default
             #line hidden
             this.Write(", click: $root.Edit");
             
-            #line 90 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 90 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
@@ -209,7 +209,7 @@ namespace GenView
                                 <tbody>
                                     ");
             
-            #line 112 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 112 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
 
                                     for(int i = 0; i < Headers.Length; i++) {
                                     
@@ -218,21 +218,21 @@ namespace GenView
             #line hidden
             this.Write("<tr><td>@Html.LabelFor(x => x.");
             
-            #line 114 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 114 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Headers[i]));
             
             #line default
             #line hidden
             this.Write(")</td><td data-bind=\"html: ");
             
-            #line 114 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 114 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Headers[i]));
             
             #line default
             #line hidden
             this.Write("\"></td></tr>\r\n                                    ");
             
-            #line 115 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 115 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
  } 
             
             #line default
@@ -245,14 +245,14 @@ namespace GenView
                                             <form id=""formDelete"">
                                                 <input data-bind=""value: ");
             
-            #line 121 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 121 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Headers[0]));
             
             #line default
             #line hidden
             this.Write("\" type=\"text\" style=\"display:none\" name=\"");
             
-            #line 121 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 121 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Headers[0]));
             
             #line default
@@ -260,7 +260,7 @@ namespace GenView
             this.Write("\" />\r\n                                                <button type=\"button\" class" +
                     "=\"btn btn-danger\" data-bind=\"click: $root.Delete");
             
-            #line 122 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 122 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
@@ -284,7 +284,7 @@ namespace GenView
             <button type=""button"" class=""close"" data-dismiss=""modal"" aria-hidden=""true"">×</button>
             <h3 id=""myModalLabel"">Thêm ");
             
-            #line 139 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 139 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
@@ -292,7 +292,7 @@ namespace GenView
             this.Write("</h3>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n            <form class=" +
                     "\"form-horizontal\" method=\"post\" action=\"");
             
-            #line 142 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 142 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
@@ -300,7 +300,7 @@ namespace GenView
             this.Write("/Create\" id=\"form\">\r\n                <!--Begin Form-->\r\n                @Html.Val" +
                     "idationSummary(true)\r\n            ");
             
-            #line 145 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 145 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
 
             if(Headers != null) {
             for(int i = 0; i < Headers.Length; i++) {
@@ -310,7 +310,7 @@ namespace GenView
             #line hidden
             this.Write("  <div class=\"control-group\">\r\n\t\t\t\t@Html.LabelFor(model => model.");
             
-            #line 149 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 149 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Headers[i]));
             
             #line default
@@ -318,28 +318,28 @@ namespace GenView
             this.Write(", new { @class = \"control-label\" })\r\n                    <div class=\"controls\">\r\n" +
                     "                        @Html.TextBoxFor(model => model.");
             
-            #line 151 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 151 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Headers[i]));
             
             #line default
             #line hidden
             this.Write(", new { @class = \"span12\", placeholder = \"");
             
-            #line 151 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 151 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Headers[i]));
             
             #line default
             #line hidden
             this.Write("\", id = \"");
             
-            #line 151 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 151 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Headers[i]));
             
             #line default
             #line hidden
             this.Write("Edit\", data_bind=\"value: val.");
             
-            #line 151 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 151 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Headers[i]));
             
             #line default
@@ -347,14 +347,14 @@ namespace GenView
             this.Write("\" })\r\n                        <!--<span class=\"text-error\">@Html.ValidationMessag" +
                     "eFor(model => model.");
             
-            #line 152 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 152 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Headers[i]));
             
             #line default
             #line hidden
             this.Write(")</span> -->\r\n                    </div>\r\n                </div>\r\n            ");
             
-            #line 155 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 155 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
  
             } }
             
@@ -366,28 +366,28 @@ namespace GenView
                     "\">Đóng</button>\r\n            <button class=\"btn btn-primary\" data-bind=\"click: C" +
                     "reate");
             
-            #line 161 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 161 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
             #line hidden
             this.Write("Submit\" id=\"btnCreate\">Tạo ");
             
-            #line 161 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 161 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
             #line hidden
             this.Write("</button>\r\n            <button class=\"btn btn-primary\" data-bind=\"click: Edit");
             
-            #line 162 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 162 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
             #line hidden
             this.Write("Submit\" id=\"btnEdit\">Sửa ");
             
-            #line 162 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 162 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
@@ -395,42 +395,42 @@ namespace GenView
             this.Write("</button>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n\r\n<script src=\"~/Scripts/Insite/" +
                     "Views/");
             
-            #line 168 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 168 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
             #line hidden
             this.Write("/");
             
-            #line 168 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 168 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
             #line hidden
             this.Write("ModelValidation.js\"></script>\r\n<script src=\"~/Scripts/Insite/Views/");
             
-            #line 169 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 169 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
             #line hidden
             this.Write("/");
             
-            #line 169 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 169 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
             #line hidden
             this.Write("Model.js\"></script>\r\n<script src=\"~/Scripts/Insite/Views/");
             
-            #line 170 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 170 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
             #line hidden
             this.Write("/");
             
-            #line 170 "C:\Users\TheSaboteur\Desktop\Working File\GenTool\GenView\ViewTemplate.tt"
+            #line 170 "D:\Proj\VSW2013\POSManager\GenTool\GenView\ViewTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TableName));
             
             #line default
