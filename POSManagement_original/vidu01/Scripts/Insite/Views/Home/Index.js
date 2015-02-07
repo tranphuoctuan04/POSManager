@@ -26,8 +26,8 @@ var Hanghoa = function (HanghoaId, Maso, Ten, Giaban, NgayGiaban) {
     var self = this;
     self.HanghoaId = ko.observable(HanghoaId);
     self.Maso = ko.observable(Maso);
-    self.Ten = ko.observable(Ten).extend({required: {params: true, message: 'Tên không được để trống'}});
-    self.Giaban = ko.observable(Giaban).extend({ required: true, min: 1000, max: 1000000 });
+    self.Ten = ko.observable(Ten).extend({required: {params: true, message: '*Tên không được để trống'}});
+    self.Giaban = ko.observable(Giaban).extend({ required: true, min: { params: 1000, message: '*Giá bán phải lớn hơn 1000' }, max: { params: 1000000, message: '*Giá bán phải nhỏ hơn 1000000' } });
     self.NgayGiaban = ko.observable(NgayGiaban);
     // bổ sung
     self.IsCreate = ko.observable(false);
@@ -177,8 +177,16 @@ var HanghoaViewModel = function () {
 $(document).ready(function () {
     var model = new HanghoaViewModel();
     model.InitData();
+    
+    ko.validation.init({
+        decorateElement: true,
+        errorMessageClass: 'text-error',
+        insertMessages: true,
+    });
+
     ko.applyBindings(model);
 
+    
 
     
 });
