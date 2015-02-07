@@ -26,7 +26,7 @@ var Hanghoa = function (HanghoaId, Maso, Ten, Giaban, NgayGiaban) {
     var self = this;
     self.HanghoaId = ko.observable(HanghoaId);
     self.Maso = ko.observable(Maso);
-    self.Ten = ko.observable(Ten).extend({ required: {params: true, message: 'Tên không được để trống'}});
+    self.Ten = ko.observable(Ten).extend({required: {params: true, message: 'Tên không được để trống'}});
     self.Giaban = ko.observable(Giaban).extend({ required: true, min: 1000, max: 1000000 });
     self.NgayGiaban = ko.observable(NgayGiaban);
     // bổ sung
