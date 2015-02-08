@@ -1,0 +1,139 @@
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\vidu01.dll
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\vidu01.pdb
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\Microsoft.Web.Infrastructure.dll
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\Newtonsoft.Json.dll
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Net.Http.Formatting.dll
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.Helpers.dll
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.Http.dll
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.Http.WebHost.dll
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.Mvc.dll
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.Razor.dll
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.WebPages.Deployment.dll
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.WebPages.dll
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.WebPages.Razor.dll
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\Newtonsoft.Json.xml
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Net.Http.Formatting.xml
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.Helpers.xml
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.Http.xml
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.Http.WebHost.xml
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.Mvc.xml
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.Razor.xml
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.WebPages.xml
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.WebPages.Deployment.xml
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\bin\System.Web.WebPages.Razor.xml
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\obj\Debug\vidu01.csprojResolveAssemblyReference.cache
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\obj\Debug\vidu01.dll
+D:\tuantp@live.com\Copy\___Current Project\POSManager\vidu01\obj\Debug\vidu01.pdb
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\vidu01.dll.config
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\vidu01.dll
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\vidu01.pdb
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\Newtonsoft.Json.dll
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\System.Web.Helpers.dll
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\System.Web.Mvc.dll
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\System.Web.Razor.dll
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\System.Web.WebPages.dll
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\System.Web.WebPages.Razor.dll
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\Newtonsoft.Json.xml
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\System.Web.Helpers.xml
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\System.Web.Mvc.xml
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\System.Web.Razor.xml
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\System.Web.WebPages.xml
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\bin\System.Web.WebPages.Razor.xml
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\obj\Debug\vidu01.csprojResolveAssemblyReference.cache
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\obj\Debug\vidu01.dll
+C:\Users\Thomas Million\Desktop\POSManagement\vidu01\obj\Debug\vidu01.pdb
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\vidu01.dll.config
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\vidu01.dll
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\vidu01.pdb
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\Microsoft.Web.Infrastructure.dll
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\Newtonsoft.Json.dll
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\System.Web.Helpers.dll
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\System.Web.Mvc.dll
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\System.Web.Razor.dll
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\System.Web.WebPages.Deployment.dll
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\System.Web.WebPages.dll
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\System.Web.WebPages.Razor.dll
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\Newtonsoft.Json.xml
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\System.Web.Helpers.xml
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\System.Web.Mvc.xml
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\System.Web.Razor.xml
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\System.Web.WebPages.xml
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\System.Web.WebPages.Deployment.xml
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\System.Web.WebPages.Razor.xml
+D:\DAIHOC\Training\POSManagement_original\vidu01\obj\Debug\vidu01.csprojResolveAssemblyReference.cache
+D:\DAIHOC\Training\POSManagement_original\vidu01\obj\Debug\vidu01.dll
+D:\DAIHOC\Training\POSManagement_original\vidu01\obj\Debug\vidu01.pdb
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\EntityFramework.dll
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\EntityFramework.SqlServer.dll
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\EntityFramework.xml
+D:\DAIHOC\Training\POSManagement_original\vidu01\bin\EntityFramework.SqlServer.xml
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\vidu01.dll.config
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\vidu01.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\vidu01.pdb
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\EntityFramework.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\EntityFramework.SqlServer.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\Newtonsoft.Json.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Net.Http.Formatting.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.Helpers.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.Http.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.Http.WebHost.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.Mvc.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.Razor.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.WebPages.Deployment.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.WebPages.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.WebPages.Razor.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\EntityFramework.xml
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\EntityFramework.SqlServer.xml
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\Newtonsoft.Json.xml
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Net.Http.Formatting.xml
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.Helpers.xml
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.Http.xml
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.Http.WebHost.xml
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.Mvc.xml
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.Razor.xml
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.WebPages.xml
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.WebPages.Deployment.xml
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\bin\System.Web.WebPages.Razor.xml
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\obj\Debug\vidu01.csprojResolveAssemblyReference.cache
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\obj\Debug\vidu01.dll
+C:\Users\TheSaboteur\Desktop\POSManagement_original\vidu01\obj\Debug\vidu01.pdb
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\vidu01.dll.config
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\vidu01.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\vidu01.pdb
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\EntityFramework.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\EntityFramework.SqlServer.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\Microsoft.Web.Infrastructure.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\Newtonsoft.Json.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Net.Http.Formatting.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.Helpers.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.Http.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.Http.WebHost.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.Mvc.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.Razor.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.WebPages.Deployment.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.WebPages.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.WebPages.Razor.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\EntityFramework.xml
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\EntityFramework.SqlServer.xml
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\Newtonsoft.Json.xml
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Net.Http.Formatting.xml
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.Helpers.xml
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.Http.xml
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.Http.WebHost.xml
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.Mvc.xml
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.Razor.xml
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.WebPages.xml
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.WebPages.Deployment.xml
+D:\GIT2\POSManager\POSManagement_original\vidu01\bin\System.Web.WebPages.Razor.xml
+D:\GIT2\POSManager\POSManagement_original\vidu01\obj\Debug\vidu01.csprojResolveAssemblyReference.cache
+D:\GIT2\POSManager\POSManagement_original\vidu01\obj\Debug\vidu01.dll
+D:\GIT2\POSManager\POSManagement_original\vidu01\obj\Debug\vidu01.pdb
