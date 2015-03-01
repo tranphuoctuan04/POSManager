@@ -1,0 +1,1 @@
+﻿Gửi tin nhắn từ Sender lên queue, từ queue đến receiver

@@ -1,0 +1,9 @@
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Worker\bin\Debug\Worker.exe.config
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Worker\bin\Debug\Worker.exe
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Worker\bin\Debug\Worker.pdb
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Worker\bin\Debug\RabbitMQ.Client.dll
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Worker\bin\Debug\RabbitMQ.ServiceModel.dll
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Worker\bin\Debug\RabbitMQ.Client.xml
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Worker\obj\Debug\Worker.exe
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Worker\obj\Debug\Worker.pdb
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Worker\obj\Debug\Worker.csprojResolveAssemblyReference.cache
