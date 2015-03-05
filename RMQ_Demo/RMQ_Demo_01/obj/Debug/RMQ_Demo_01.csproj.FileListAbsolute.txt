@@ -1,0 +1,9 @@
+c:\users\thesaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RMQ_Demo_01\bin\Debug\RMQ_Demo_01.exe.config
+c:\users\thesaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RMQ_Demo_01\bin\Debug\RMQ_Demo_01.exe
+c:\users\thesaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RMQ_Demo_01\bin\Debug\RMQ_Demo_01.pdb
+c:\users\thesaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RMQ_Demo_01\bin\Debug\RabbitMQ.Client.dll
+c:\users\thesaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RMQ_Demo_01\bin\Debug\RabbitMQ.ServiceModel.dll
+c:\users\thesaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RMQ_Demo_01\bin\Debug\RabbitMQ.Client.xml
+c:\users\thesaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RMQ_Demo_01\obj\Debug\RMQ_Demo_01.csprojResolveAssemblyReference.cache
+c:\users\thesaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RMQ_Demo_01\obj\Debug\RMQ_Demo_01.exe
+c:\users\thesaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RMQ_Demo_01\obj\Debug\RMQ_Demo_01.pdb

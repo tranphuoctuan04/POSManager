@@ -1,0 +1,9 @@
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RPCServer\bin\Debug\RPCServer.exe.config
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RPCServer\bin\Debug\RPCServer.exe
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RPCServer\bin\Debug\RPCServer.pdb
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RPCServer\bin\Debug\RabbitMQ.Client.dll
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RPCServer\bin\Debug\RabbitMQ.ServiceModel.dll
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RPCServer\bin\Debug\RabbitMQ.Client.xml
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RPCServer\obj\Debug\RPCServer.csprojResolveAssemblyReference.cache
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RPCServer\obj\Debug\RPCServer.exe
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\RPCServer\obj\Debug\RPCServer.pdb

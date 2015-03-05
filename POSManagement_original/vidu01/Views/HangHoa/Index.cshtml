@@ -1,0 +1,192 @@
+﻿@{
+    ViewBag.Title = "Hanghoa";
+}
+<style>
+</style>
+<link href="~/Content/css/style.css" rel="stylesheet" />
+<!-- knockout -->
+
+<script src="~/Content/knockout/knockout-3.1.0.js"></script>
+<script src="~/Content/jquery/jquery.min.js"></script>
+<script src="~/Content/knockout/knockout.validation.min.js"></script>
+
+<link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+<script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+<script src="~/Content/bootstrap/js/bootstrap.plugins.min.js"></script>
+
+
+<h2 class="caption">Hanghoa</h2>
+<div class="row-fluid">
+    <!---Left -->
+    <div class="span5">
+        <div class="w-box-header">
+            <i class="icon-list"></i>&nbsp;Danh sách Hanghoa (<span data-bind="html: CountSearch() + '/' + List().length"></span>)
+            <span class="pull-right">
+                <a class="btn btn-success"  data-bind="click: CreateHanghoa"><i class=" icon-plus icon-white"></i></a>
+            </span>
+        </div>
+
+        <div class="w-box-content cnt_a" data-bind="fadeVisible: true">
+            <div class="form-vertical">
+                <div class="row-fluid">
+                    <input class="controls" data-bind="value: SearchName, valueUpdate: 'afterkeydown', event: { keyup: btnSearchName }" />
+                    <a class="btn btn-success" data-bind="click: btnSearchName"><span class="icon-search icon-white"></span></a>
+                </div>
+                <div class="row-fluid">
+                    <div style="height: 500px; overflow: auto;">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="">Code</th>
+                                        <th class="">Tên</th>
+                                        <th class="">Giá bán</th>
+                                        <th class="">Ngày giá bán</th>
+                                        <th class="">Nhóm hàng hóa</th>
+                                        <th class="">Bán</th>
+                                    </tr>
+                                </thead>
+                                <tbody data-bind="template: { name: 'RowItem', foreach: List }"></tbody>
+                                <tfoot data-bind="visible: List().length == 0">
+                                    <tr>
+                                        <td colspan=" 7">Không có dữ liệu</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script id="RowItem" type="text/html">
+            <tr data-bind="css: { normalrow: (($index() % 2) == 0), alternativerow: ($index() % 2 != 0) }, visible: IsVisible() == true">
+                <td style='font-weight: bold;'><span data-bind='html: Code'></span></td>
+                <td style='font-weight: bold;'><a style='cursor: pointer'><span data-bind='html: Ten,click: $root.btnSetCurrent'></span></a></td>
+                <td style='font-weight: bold;'><span data-bind='html: (Giaban() != null) ? Giaban : "Chưa có"'></span></td>
+                <td style='font-weight: bold;'><span data-bind='html: (getDate() != "Invalid Date") ? getDate : "Chưa có"'></span></td>
+                <td style='font-weight: bold; display: none'><span data-bind='html: NgayGiaban'></span></td>
+                <td style='font-weight: bold;'><span data-bind='html: TenNhomHanghoa'></span></td>
+                <td style='font-weight: bold;'>
+                    <a href="#" class="btn btn-inverse" data-bind="click: $root.batdauBan,visible: Dangban()==false "><i class="icon-edit icon-white"></i></a>
+                    <a href="#" class="btn btn-success" data-bind="click: $root.ngungBan,visible: Dangban()==true "><i class="icon-edit icon-white"></i></a>
+                </td>
+                <td style="text-align: right;">
+                    <a href="#" class="btn btn-warning" title="Sửa hàng hóa" data-bind="click: $root.Edit"><i class="icon-edit icon-white"></i></a>
+                </td>
+                <td style="text-align: right;">
+                    <a href="#" class="btn btn-danger" title="Xóa hàng hóa" data-bind="click: $root.remove"><i class="icon-remove icon-white"></i></a>
+                </td>
+            </tr>
+        </script>
+    </div>
+    <!---End Left -->
+    <!---Right -->
+    <div class="span7" data-bind="with: Current">
+        <div class="w-box-header">
+            <i class="icon-list"></i>&nbsp;Thông tin chi tiết
+        </div>
+
+        <div class="w-box-content cnt_a" data-bind="fadeVisible: true">
+            <div class="form-vertical">
+                <div class="row-fluid">
+                    <div style="height: 527px; overflow: auto;">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped" border="1">
+                                <tbody>
+                                    <tr><td class='' style="width:40%">Code</td><td class=''><span data-bind='text: Code, visible: IsEdit()==false'></span><input type='number' data-bind='value: Code, visible: IsEdit()' style="height:30px" /></td></tr>
+                                    <tr><td class=''>Tên</td><td class=''><span data-bind='text: Ten, visible: IsEdit()==false'></span><input type='text' data-bind='value: Ten, visible: IsEdit()' style="height:30px" /></td></tr>
+                                    <tr><td class=''>Nhóm hàng hóa</td><td class=''><span data-bind='text: TenNhomHanghoa, visible: IsEdit()==false'></span><select style="height:30px" id="NhomHanghoaId" data-bind="options: $root.ListNhomHanghoa, value:$root.Current().NhomHanghoaId  , optionsValue: 'NhomHanghoaId', optionsText: 'Ten', visible: IsEdit()"></select></td></tr>
+                                    <tr style="border-width: 0px">
+                                        <td></td>
+                                        <td>
+                                            <button data-bind="visible: IsEdit()==true, click: $root.luuHanghoa" class="btn btn-primary">Lưu <i class="icon-ok icon-white"></i></button>
+                                            <button data-bind="click: $root.Thoat,visible: IsEdit()==true" class="btn btn-default">Hũy <i class="icon-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- BẢNG GIÁ HÀNG HÓA -->
+                            <table class="table-bordered table-striped table-responsive" style="width:100%" data-bind="visible: ( !$root.Current().IsCreate() && !$root.Current().IsEdit())">
+                                <thead>
+                                    <tr>
+                                        <th class="">Code</th>
+                                        <th class="">Giá</th>
+                                        <th class="">Ngày bắt đầu áp dụng</th>
+                                        <th class="">
+                                            <a href="#myModal" data-toggle="modal" class="btn btn-success span12" data-bind="click: $root.themGiaHanghoa"><i class="icon-plus icon-white"></i></a>
+                                        </th>
+                                    </tr>
+                                </thead>
+ 
+                                <tbody data-bind="foreach: $root.ListGiaHanghoa" style="text-align:center">
+                                    <tr data-bind="visible: (HanghoaId() == $root.Current().HanghoaId())">
+                                        <td data-bind='html: HanghoaId, visible: false'></td>
+                                        <td data-bind='html: Code'></td>
+                                        <td data-bind='html: Gia'></td>
+                                        <td data-bind='html: getDate  '></td>
+                                        <td style="text-align: right; width:12%">
+                                            <a href="#myModal" data-toggle="modal" class="btn btn-warning span6" data-bind="click: $root.suaGiaHanghoa"><i class="icon-edit icon-white"></i></a>
+                                            <a href="#" class="btn btn-danger span6" data-bind="click: $root.xoaGiaHanghoa"><i class="icon-remove icon-white"></i></a>
+                                        </td>
+                                    </tr>
+                                    @*<tr>
+                                        <td data-bind="html: $root.CountGiaHanghoa()" colspan="4" style="text-align:center"><b class="text-info">Không có thông tin giá hàng hóa</b></td>
+                                    </tr>*@
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ~~ MODAL GIÁ HÀNG HÓA -->
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-bind="with: GiaHanghoaCurrent " data-backdrop="static">
+    <div class="modal-header">
+        <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-bind="click: $root.huyGiaHanghoa">×</button>-->
+        <h3 id="myModalLabel" data-bind="visible: IsCreate()">Thêm Giá hàng hóa</h3>
+        <h3 id="myModalLabel" data-bind="visible: IsEdit()">Sửa Giá hàng hóa</h3>
+    </div>
+
+    <div class="modal-body">
+        <form name="formGiaHanghoa" class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label span4">Code: </label>
+                <div class="controls">
+                    <input type="number" id="" placeholder="Code" class="input-xlarge" style="height:30px" data-bind="value: Code">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label span4">Giá: </label>
+                <div class="controls">
+                    <input type="number" id="" placeholder="Giá của hàng hóa" class="input-xlarge" style="height:30px" data-bind="value: Gia">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label span4">Ngày bắt đầu: </label>
+                <div class="controls">
+                    <input type="date" id="" placeholder="Ngày bắt đầu áp dụng" class="input-xlarge" style="height:30px" data-bind="value: NgayApdung" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true" data-bind="click: $root.huyGiaHanghoa">Hũy</button>
+        <button class="btn btn-primary" aria-hidden="true" data-bind="click: $root.luuGiaHanghoa">Lưu </button>
+    </div>
+</div>
+
+<!---End Right -->
+<script src="~/Scripts/Insite/Views/GiaHanghoa/GiaHanghoaModel.js"></script>
+<script src="~/Scripts/Insite/Views/Hanghoa/HanghoaModel.js"></script>
+<script src="~/Scripts/Insite/Views/Hanghoa/HanghoaViewModel.js"></script>

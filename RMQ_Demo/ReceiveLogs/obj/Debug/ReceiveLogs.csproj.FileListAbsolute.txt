@@ -1,0 +1,9 @@
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\ReceiveLogs\bin\Debug\ReceiveLogs.exe.config
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\ReceiveLogs\bin\Debug\ReceiveLogs.exe
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\ReceiveLogs\bin\Debug\ReceiveLogs.pdb
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\ReceiveLogs\bin\Debug\RabbitMQ.Client.dll
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\ReceiveLogs\bin\Debug\RabbitMQ.ServiceModel.dll
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\ReceiveLogs\bin\Debug\RabbitMQ.Client.xml
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\ReceiveLogs\obj\Debug\ReceiveLogs.csprojResolveAssemblyReference.cache
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\ReceiveLogs\obj\Debug\ReceiveLogs.exe
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\ReceiveLogs\obj\Debug\ReceiveLogs.pdb

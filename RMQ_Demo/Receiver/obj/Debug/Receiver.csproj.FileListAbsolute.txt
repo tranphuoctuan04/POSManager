@@ -1,0 +1,8 @@
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Receiver\bin\Debug\Receiver.exe.config
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Receiver\bin\Debug\Receiver.exe
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Receiver\bin\Debug\Receiver.pdb
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Receiver\bin\Debug\RabbitMQ.Client.dll
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Receiver\bin\Debug\RabbitMQ.ServiceModel.dll
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Receiver\bin\Debug\RabbitMQ.Client.xml
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Receiver\obj\Debug\Receiver.exe
+C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Receiver\obj\Debug\Receiver.pdb

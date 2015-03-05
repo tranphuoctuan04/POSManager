@@ -1,0 +1,302 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ include file="TemplateFileManagerV2.1.ttinclude" #>
+<#@ assembly name="$(TargetPath)" #>
+<#@ import namespace="Validation_I" #>
+<#@ output extension="tmp" #>
+<# var manager = Manager.Create(Host, GenerationEnvironment); #>
+
+<# Type t = typeof(vidu01.Models.User); #>
+
+<# manager.StartNewFile(t.Name + "Model.js");#>
+<#    Write(GenClientModelValidation.CreateValidation(t));  #>
+    // Addon
+    self.IsCreate = ko.observable(false);
+    self.IsEdit = ko.observable(false);
+    self.IsVisible = ko.observable(true);
+    self.OldValue = ko.observable({});
+
+    // Validate.
+    this.Errors = ko.validation.group(this);
+    this.isValid = ko.computed(function () {
+        return self.Errors().length == 0;
+    });
+}
+<# manager.EndBlock();#>
+
+<# manager.StartNewFile(t.Name + "ViewModel.js");#>
+var AjaxObj = function () {
+    this.SuccessHandleFunction = null;
+    this.Action = function (parameters, ajaxUrl, contentType, method) {
+        $.ajax({
+            type: method,
+            url: ajaxUrl,
+            contentType: contentType,
+            data: parameters,
+            success: function (e) {
+                if (AjaxInstance.SuccessHandleFunction != null) {
+                    AjaxInstance.SuccessHandleFunction(e.Data);
+                }
+            },
+            error: function (e) {
+                alert('Lỗi không thể kết nối đến server.');
+            }
+        });
+
+    };
+};
+var AjaxInstance = new AjaxObj();
+
+var <#=t.Name#>ViewModel = function () {
+    var self = this;
+    // Data
+    self.List = ko.observableArray([]);
+    self.Current = ko.observable(null);
+    self.SearchName = ko.observable("");
+
+    //function
+    self.CountSearch = ko.computed(function () {
+        var i = 0;
+        ko.utils.arrayForEach(self.List(), function (item) {
+            if (item.IsVisible() == true)
+                i++;
+        });
+        return i;
+    });
+
+
+    self.InitData = function () {
+        self.InitList();
+    };
+    self.InitList = function () {
+        AjaxInstance.SuccessHandleFunction = function (data) {
+            //alert(data);
+            if (data != null && data.length > 0) {
+                var index = 0;
+                var listItems = ko.utils.arrayMap(data, function (item) {
+                    //alert(item.co_name);
+                    index++;
+                    return new <#=t.Name#>(<#= GenClientModelValidation.GetPropertiesS(t,"item.") #>);
+                });
+                // alert(listItems);
+                self.List.push.apply(self.List, listItems);
+                if (self.List().length > 0)
+                    self.Current(self.List()[0]);
+            }
+        };
+
+        AjaxInstance.Action("", "http://localhost:56173/<#= t.Name #>/Get<#= t.Name #>Items", 'application/json; charset=utf-8', 'get');
+    };
+
+    //Action
+    self.btnSetCurrent = function (item) {
+        item.IsEdit(false);
+        item.OldValue(ko.toJS(item));
+        self.Current(item);
+    };
+    self.btnSearchName = function () {
+        var iCurr = null;
+        ko.utils.arrayForEach(self.List(), function (item) {
+            if (item.<#= GenClientModelValidation.GetProperty(t,1) #>().toLowerCase().indexOf(self.SearchName().toLowerCase()) != -1) {
+                if (iCurr == null) {
+                    iCurr = item;
+                    self.Current(item);
+                }
+                item.IsVisible(true);
+            }
+            else {
+                item.IsVisible(false);
+            }
+        });
+    };
+    self.CreateHanghoa = function () {
+        var newItem = new <#= t.Name #>(null, null, null, null);
+        newItem.IsEdit(true);
+        newItem.IsCreate(true);
+        self.Current(newItem);
+    };
+
+    self.Thoat = function (item) {
+        var obj = JSON.parse(ko.toJSON(item.OldValue())); // Lấy oldValue
+        if (obj.<#= GenClientModelValidation.GetProperty(t,0) #>) {// Nếu không có Id Nghĩa là người dùng ấn Edit rồi hũy   
+            <#=GenClientModelValidation.GetProperties(t,"item.#(obj.#)","; \n            ") #> 
+        }
+        item.IsEdit(false);
+        self.Current(self.List()[0]);
+    };
+    
+    self.Edit = function(item){
+        item.IsEdit(true);
+        item.OldValue(ko.toJS(item));
+        self.Current(item);
+    }
+
+    self.luuHanghoa = function (item) {
+        if (!self.Current().isValid()) // Kiểm tra xem model này có đúng hay không
+            return // Nếu sai thì return.
+
+        var jsonData = ko.toJSON(self.Current());
+        if (self.Current().IsCreate() == false)
+        {
+            AjaxInstance.SuccessHandleFunction = function (data) {
+                alert(data);
+            }
+            AjaxInstance.Action(jsonData, "http://localhost:56173/<#= t.Name #>/Edit<#= t.Name #>Item", 'application/json; charset=utf-8', 'post');
+        }
+        else
+        {
+            AjaxInstance.SuccessHandleFunction = function (data) {
+                var arr = data.split('-+-');
+                if (arr[0] == "Thêm thành công") {
+                    item.<#= GenClientModelValidation.GetProperty(t,0) #> = arr[1];
+                    self.List.push(item);
+                }
+                alert(arr[0]);
+            }
+            AjaxInstance.Action(jsonData, "http://localhost:56173/<#= t.Name #>/add<#= t.Name #>Item", 'application/json; charset=utf-8', 'post');
+            
+        }
+        self.Current().IsCreate(false);
+        self.Current().IsEdit(false);
+    };
+    self.remove = function(item)
+    {
+        if (confirm("Bạn có chắc chắn muốn xóa: " + item.<#= GenClientModelValidation.GetProperty(t,1) #>()) == false) {
+            return;
+        }
+        var jsonData = ko.toJSON(item);
+        AjaxInstance.SuccessHandleFunction = function (data) {
+            if (data == "Xóa thành công") self.List.remove(item);
+            alert(data);        
+        }
+        AjaxInstance.Action(jsonData, "http://localhost:56173/<#= t.Name #>/delete<#= t.Name #>Item", 'application/json; charset=utf-8', 'post');
+        
+        self.Current(self.List()[0]);
+    }
+};
+
+$(document).ready(function () {
+    var model = new <#= t.Name #>ViewModel();
+    model.InitData();
+    
+    ko.validation.init({
+        decorateElement: true,
+        errorMessageClass: 'text-error',
+        insertMessages: true,
+    });
+    ko.applyBindings(model);
+});
+
+<# manager.EndBlock();#>
+
+<# manager.StartNewFile(t.Name + "View.cshtml");#>
+@{
+    ViewBag.Title = "<#= t.Name #>";
+}
+<link href="~/Content/css/style.css" rel="stylesheet" />
+<!-- knockout -->
+
+<script src="~/Content/knockout/knockout-3.1.0.js"></script>
+<script src="~/Content/jquery/jquery.min.js"></script>
+<script src="~/Content/knockout/knockout.validation.min.js"></script>
+
+<link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+<script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+<script src="~/Content/bootstrap/js/bootstrap.plugins.min.js"></script>
+
+
+<h2 class="caption"><#= t.Name #></h2>
+<div class="row-fluid">
+    <!---Left -->
+    <div class="span4">
+        <div class="w-box-header">
+            <i class="icon-list"></i>&nbsp;Danh sách <#= t.Name #> (<span data-bind="html: CountSearch() + '/' + List().length"></span>)
+            <span class="pull-right">
+                <a class="btn btn-success" data-bind="click: CreateHanghoa"><i class=" icon-plus icon-white"></i></a>
+            </span>
+        </div>
+
+        <div class="w-box-content cnt_a" data-bind="fadeVisible: true">
+            <div class="form-vertical">
+                <div class="row-fluid">
+                    <input class="controls" data-bind="value: SearchName, valueUpdate: 'afterkeydown', event: { keyup: btnSearchName }" />
+                    <a class="btn btn-success" data-bind="click: btnSearchName"><span class="icon-search icon-white"></span></a>
+                </div>
+                <div class="row-fluid">
+                    <div style="height: 430px; overflow: auto;">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <#=GenClientModelValidation.GetProperties(t,"<th class=\"\">#</th> ","\n                                        ") #> 
+                                    </tr>
+                                </thead>
+                                <tbody data-bind="template: { name: 'RowItem', foreach: List }"></tbody>
+                                <tfoot data-bind="visible: List().length == 0">
+                                    <tr>
+                                        <td colspan=" <#=GenClientModelValidation.Count(t)#>">Không có dữ liệu</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script id="RowItem" type="text/html">
+            <tr data-bind="css: { normalrow: (($index() % 2) == 0), alternativerow: ($index() % 2 != 0) }, visible: IsVisible() == true">
+                <#=GenClientModelValidation.GetProperties(t,"<td style='font-weight: bold;'><a style='cursor: pointer'><span data-bind='html: #,click: $root.btnSetCurrent'></span></a></td>","\n                ") #> 
+                <td style="text-align: right;">
+                    <a href="#" class="btn btn-warning" title="Sửa hàng hóa" data-bind="click: $root.Edit"><i class="icon-edit icon-white"></i></a>
+                </td>
+                <td style="text-align: right;">
+                    <a href="#" class="btn btn-danger" title="Xóa hàng hóa" data-bind="click: $root.remove"><i class="icon-remove icon-white"></i></a>
+                </td>
+            </tr>
+        </script>
+    </div>
+    <!---End Left -->
+    <!---Right -->
+    <div class="span8" data-bind="with: Current">
+        <div class="w-box-header">
+            <i class="icon-list"></i>&nbsp;Thông tin chi tiết
+        </div>
+        <div class="w-box-content cnt_a" data-bind="fadeVisible: true">
+            <div class="form-vertical">
+                <div class="row-fluid">
+                    <div style="height: 456px; overflow: auto;">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped" border="1">
+                                <tbody>
+                                    <#=GenClientModelValidation.GetProperties(t,"<tr><td class=''>#</td><td class=''><span data-bind='text: #, visible: IsEdit()==false'></span><input type='text' data-bind='value: #, visible: IsEdit()' /></td></tr>","\n                                    ") #>
+                                    <tr style="border-width: 0px">
+                                        <td></td>
+                                        <td >
+                                            <button data-bind="visible: IsEdit()==true, click: $root.luuHanghoa" class="btn btn-primary">Lưu <i class="icon-ok icon-white"></i></button>
+                                            <button data-bind="click: $root.Thoat,visible: IsEdit()==true" class="btn btn-default">Hũy <i class="icon-trash"></i></button>
+                                        </td>
+                                    </tr>                                
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---End Right -->
+<script src="~/Scripts/Insite/Views/<#= t.Name #>/<#= t.Name #>Model.js"></script>
+<script src="~/Scripts/Insite/Views/<#= t.Name #>/<#= t.Name #>ViewModel.js"></script>
+<# manager.EndBlock();#>
+
+
+
+
+<#    manager.Process(true);#>
+
