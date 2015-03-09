@@ -1,8 +1,0 @@
-C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Sender\bin\Debug\Sender.exe.config
-C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Sender\bin\Debug\Sender.exe
-C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Sender\bin\Debug\Sender.pdb
-C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Sender\bin\Debug\RabbitMQ.Client.dll
-C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Sender\bin\Debug\RabbitMQ.ServiceModel.dll
-C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Sender\bin\Debug\RabbitMQ.Client.xml
-C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Sender\obj\Debug\Sender.exe
-C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Sender\obj\Debug\Sender.pdb
