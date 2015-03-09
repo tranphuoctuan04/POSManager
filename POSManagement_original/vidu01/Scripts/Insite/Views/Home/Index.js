@@ -1,22 +1,4 @@
-﻿var Hanghoa = function (HanghoaId, Maso, Ten, Giaban, NgayGiaban) {
-    var self = this;
-    self.HanghoaId = ko.observable(HanghoaId);
-    self.Maso = ko.observable(Maso);
-    self.Ten = ko.observable(Ten).extend({ required: { params: true, message: '*Tên không được để trống' } });
-    self.Giaban = ko.observable(Giaban).extend({ required: true, min: { params: 1000, message: '*Giá bán phải lớn hơn 1000' }, max: { params: 1000000, message: '*Giá bán phải nhỏ hơn 1000000' } });
-    self.NgayGiaban = ko.observable(NgayGiaban);
-    // bổ sung
-    self.IsCreate = ko.observable(false);
-    self.IsEdit = ko.observable(false);
-    self.IsVisible = ko.observable(true);
-    self.OldValue = ko.observable({});
-
-    // Validate.
-    this.Errors = ko.validation.group(this);
-    this.isValid = ko.computed(function () {
-        return self.Errors().length == 0;
-    });
-}
+﻿
 
 var AjaxObj = function () {
     this.SuccessHandleFunction = null;
@@ -40,7 +22,25 @@ var AjaxObj = function () {
 };
 var AjaxInstance = new AjaxObj();
 
+var Hanghoa = function (HanghoaId, Maso, Ten, Giaban, NgayGiaban) {
+    var self = this;
+    self.HanghoaId = ko.observable(HanghoaId);
+    self.Maso = ko.observable(Maso).extend({ required: { params: true, message: '*Ma hang hoa la can thiet' } });
+    self.Ten = ko.observable(Ten).extend({required: {params: true, message: '*Tên không được để trống'}});
+    self.Giaban = ko.observable(Giaban).extend({ required: true, min: { params: 1000, message: '*Giá bán phải lớn hơn 1000' }, max: { params: 1000000, message: '*Giá bán phải nhỏ hơn 1000000' } });
+    self.NgayGiaban = ko.observable(NgayGiaban);
+    // bổ sung
+    self.IsCreate = ko.observable(false);
+    self.IsEdit = ko.observable(false);
+    self.IsVisible = ko.observable(true);
+    self.OldValue = ko.observable({});
 
+    // Validate.
+    this.Errors = ko.validation.group(this);
+    this.isValid = ko.computed(function () {
+        return self.Errors().length == 0;
+    });
+}
 //=================================
 var HanghoaViewModel = function () {
     var self = this;

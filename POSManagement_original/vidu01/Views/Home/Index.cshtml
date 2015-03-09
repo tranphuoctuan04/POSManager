@@ -83,13 +83,13 @@
                         <div class="table-responsive">
                             <table class="table table-bordered table-striped" border="1">
                                 <tbody>
-                                    <tr><td class="span2">Mã hàng hóa</td><td class="span5"><span data-bind="text: Maso, visible: IsEdit()==false"></span><input type="text" data-bind="value: Maso, visible: IsEdit()" /></td></tr>
+                                    <tr><td class="span2">Mã hàng hóa</td><td class="span5"><span data-bind="text: Maso, visible: IsEdit()==false"></span><input type="text" data-bind="value: Maso, visible: IsEdit(), valueUpdate: 'afterkeydown'" /></td></tr>
                                     <tr><td>Tên hàng hóa</td><td><span data-bind="text: Ten, visible: IsEdit()==false"></span><input type="text" data-bind="value: Ten, visible: IsEdit(), valueUpdate: 'afterkeydown'" /></td></tr>
-                                    <tr><td>Giá bán</td><td><span data-bind="text: Giaban, visible: IsEdit()==false"></span><input type="text" data-bind="value: Giaban, visible: IsEdit()" /></td></tr>
+                                    <tr><td>Giá bán</td><td><span data-bind="text: Giaban, visible: IsEdit()==false"></span><input type="text" data-bind="value: Giaban, visible: IsEdit(), valueUpdate: 'afterkeydown'" /></td></tr>
                                 </tbody>
                             </table>
                             <button data-bind="visible: IsEdit()==true, click: $root.luuHanghoa" class="btn btn-primary">Lưu <i class="icon-ok icon-white"></i></button>
-                            <button data-bind="click: $root.Thoat,visible: IsEdit()==true" class="btn btn-default">Hũy <i class="icon-trash"></i></button>
+                            <button data-bind="click: $root.Thoat,visible: IsEdit()==true" class="btn btn-default">Hủy <i class="icon-trash"></i></button>
                         </div>
                     </div>
                 </div>
