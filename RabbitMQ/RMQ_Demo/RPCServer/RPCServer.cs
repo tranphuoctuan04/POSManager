@@ -23,10 +23,10 @@ namespace RPCServer
             {
                 using (var channel = connection.CreateModel())
                 {
-                    // Tạo Queue có tên rpc_queue  tham số này thì tắt service là mất queue
+                    /*Tạo queue, tất cả request sẻ gửi lên queue này*/
                     channel.QueueDeclare("rpc_queue",false, false, false, null);
 
-                    // Không gửi quá 1 tin nhắn cho thằng này cho đến khi nó đã tải xong tin cũ.
+                    /*Không gửi quá một tin nhắn cho Worker này*/
                     channel.BasicQos(0, 1, false);
 
                     var consumer = new QueueingBasicConsumer(channel);
@@ -37,7 +37,7 @@ namespace RPCServer
                     {
                         string response = null;
 
-                        // Đợi bắt tin nhắn từ queue
+                        /* Đợi bắt tin nhắn từ queue */
                         var ea = (BasicDeliverEventArgs)consumer.Queue.Dequeue();
 
                         
@@ -67,6 +67,8 @@ namespace RPCServer
                             // props.ReplyTo là tên của queue đã tạo bên client, nói chung là để gửi cho đúng queue.
                             channel.BasicPublish("", props.ReplyTo, replyProps, responseBytes);
 
+                            /*Do bên trên đã thiết lập Qos nên khi nhận và xử lý xongt in nhắn phải ack cho 
+                             server biết để nếu còn tin nhắn tồn đọng trong queue thì server sẻ tiếp tục gửi*/
                             channel.BasicAck(ea.DeliveryTag, false);
                         }
 

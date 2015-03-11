@@ -15,10 +15,7 @@ namespace EmitLog
             {
                 using (var channel = connection.CreateModel())
                 {
-                    /* Thường RabbitMQ không gửi trực tiếp tin nhắn từ Producer lên cho queue mà thông qua trung gian
-                     * gọi là exchange, exchange sẻ nhận tin nhắn từ producer và gửi lên cho queue và exchange biết 
-                     * phải làm gì mỗi khi nó nhận được tin nhắn Xóa, gửi cho ai ..., có một số dạng fanout 
-                     * direct, topic, headers and fanout ở đây ta sẻ dùng fanout
+                    /* 
                      *  [x] fanout: Gửi tin nhắn nó nhận được cho tất cả các queue nó biết.
                      */
                     channel.ExchangeDeclare("logs", "fanout");
@@ -28,7 +25,7 @@ namespace EmitLog
                         var message = Console.ReadLine();
                         var body = Encoding.UTF8.GetBytes(message);
 
-                        // Thay gì trước đây gửi cho queue, giờ ta gửi cho exchange
+                        /*VD trước ta gửi tin nhắn vào thẳng queue, ở đây là sẻ gửi vào exchange.*/
                         channel.BasicPublish("logs", "", null, body);
                     }
                 }

@@ -7,3 +7,12 @@ C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\EmitLog\b
 C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\EmitLog\obj\Debug\EmitLog.exe
 C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\EmitLog\obj\Debug\EmitLog.pdb
 C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\EmitLog\obj\Debug\EmitLog.csprojResolveAssemblyReference.cache
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\EmitLog\bin\Debug\EmitLog.exe.config
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\EmitLog\obj\Debug\EmitLog.exe
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\EmitLog\obj\Debug\EmitLog.pdb
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\EmitLog\bin\Debug\EmitLog.exe
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\EmitLog\bin\Debug\EmitLog.pdb
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\EmitLog\bin\Debug\RabbitMQ.Client.dll
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\EmitLog\bin\Debug\RabbitMQ.ServiceModel.dll
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\EmitLog\bin\Debug\RabbitMQ.Client.xml
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\EmitLog\obj\Debug\EmitLog.csprojResolveAssemblyReference.cache

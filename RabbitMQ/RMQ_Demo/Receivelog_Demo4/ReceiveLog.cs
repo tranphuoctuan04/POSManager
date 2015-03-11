@@ -17,6 +17,7 @@ namespace ReceiveLogs
             {
                 using (var channel = connection.CreateModel())
                 {
+                    /**/
                     channel.ExchangeDeclare("direct_logs", "direct");
 
                     var queueName = channel.QueueDeclare().QueueName;
@@ -24,6 +25,8 @@ namespace ReceiveLogs
                     Console.WriteLine("Enter severity (severity,severity,...)");
                     string severity = Console.ReadLine();
 
+                    /*Tách chuỗi theo dấu , nghĩa là consumer này sẻ nói với exchange là chỉ nhận những tin nhắn
+                     có routing key là những chuỗi nhập vào, cách nhau bởi dấu ,*/
                     foreach (string s in severity.Split(','))
                     {
                         channel.QueueBind(queueName, "direct_logs", s.Trim());

@@ -19,27 +19,31 @@ namespace RPCClient
             var factory = new ConnectionFactory() { HostName = "localhost" };
             connection = factory.CreateConnection();
             channel = connection.CreateModel();
-            replyQueueName = channel.QueueDeclare(); // Tạo queue random, có dạng VD: amq.gen-c6HCeLuk7bpCgOZWYyoujA
+            replyQueueName = channel.QueueDeclare(); 
             consumer = new QueueingBasicConsumer(channel);
             channel.BasicConsume(replyQueueName, true, consumer);
         }
 
         public string Call(string message)
         {
+            /*Tạo ra một corrId không trùng*/
             var corrId = Guid.NewGuid().ToString();
             var props = channel.CreateBasicProperties();
             props.ReplyTo = replyQueueName;
-            props.CorrelationId = corrId; // Gửi cái này kèm theo để khi nhận kiểm tra lại xem có đúng hay không
+            /*Gửi thông tin này theo để lát server gửi lại sẻ kèm Id này, sau đó ta tiền hành kiểm tra, 
+             nếu trùng nhau nghĩa là tin nhắn trả đúng*/
+            props.CorrelationId = corrId; 
 
             var messageBytes = Encoding.UTF8.GetBytes(message);
-            channel.BasicPublish("", "rpc_queue", props, messageBytes); // GỬi lên cho queue
+            /*Gửi lên cho rpc_queue*/
+            channel.BasicPublish("", "rpc_queue", props, messageBytes); 
 
             while (true)
             {
                 // Đứng nhận tin nhắn
                 var ea = (BasicDeliverEventArgs)consumer.Queue.Dequeue();
 
-                // Kiểm tra xem cái Id nhận lại có trùng với Id ta gửi đi hay không?
+                /* Kiểm tra xem cái Id nhận lại có trùng với Id ta gửi đi hay không? */
                 if (ea.BasicProperties.CorrelationId == corrId)
                 {
                     return Encoding.UTF8.GetString(ea.Body);
@@ -58,8 +62,9 @@ namespace RPCClient
         {
             var rpcClient = new RPCClient();
 
-            Console.WriteLine(" [x] Requesting fib(30)");
-            var response = rpcClient.Call("30"); // Gửi tin nhắn 30 đi.
+            Console.WriteLine(" [x] Enter number: ");
+            string requestNumber = Console.ReadLine();
+            var response = rpcClient.Call(requestNumber); // Gửi tin nhắn 30 đi.
             Console.WriteLine(" [.] {0}", response);
 
             Console.ReadLine();

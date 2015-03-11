@@ -17,12 +17,17 @@ namespace ReceiveLogs
             {
                 using (var channel = connection.CreateModel())
                 {
+                    /*Tạo ra 1 exchange kiểu fanout: fanout là tin nhắn sẻ được gửi cho tất cả các queue đang
+                     kết nối vối exchange này */
                     channel.ExchangeDeclare("logs", "fanout");
 
-                    // Tạo một queueName có tên random, tự dộng sẻ xóa nếu tắt consumer
+                    /*Các VD trước khi tạo queue thì ta gán cho nó một tên nhưng trong trường hợp này khi
+                     kết nối với exchange ta cần một tên queue khác mà không trùng với các tên queue đã có,
+                     hàm bên dưới sẻ yeu cầu server tạo một queue không trùng tên, queue bên dưới durable = false
+                     Một random queue thường có dạng tương tự amq.gen-JzTY20BRgKO-HjmUJj0wLg.*/
                     var queueName = channel.QueueDeclare().QueueName;
 
-                    // Bind queueName vừa mới tạo vào channel tên là logs.
+                    /*Bind queue vừa mới tạo với Exchange*/
                     channel.QueueBind(queueName, "logs", "");
 
                     var consumer = new QueueingBasicConsumer(channel);

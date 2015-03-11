@@ -6,3 +6,12 @@ C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Demo05_Re
 C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Demo05_Receivelog\bin\Debug\RabbitMQ.Client.xml
 C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Demo05_Receivelog\obj\Debug\Demo05_Receivelog.exe
 C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\Demo05_Receivelog\obj\Debug\Demo05_Receivelog.pdb
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\Demo05_Receivelog\bin\Debug\Demo05_Receivelog.exe.config
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\Demo05_Receivelog\bin\Debug\Demo05_Receivelog.exe
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\Demo05_Receivelog\bin\Debug\Demo05_Receivelog.pdb
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\Demo05_Receivelog\bin\Debug\RabbitMQ.Client.dll
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\Demo05_Receivelog\bin\Debug\RabbitMQ.ServiceModel.dll
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\Demo05_Receivelog\bin\Debug\RabbitMQ.Client.xml
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\Demo05_Receivelog\obj\Debug\Demo05_Receivelog.csprojResolveAssemblyReference.cache
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\Demo05_Receivelog\obj\Debug\Demo05_Receivelog.exe
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\Demo05_Receivelog\obj\Debug\Demo05_Receivelog.pdb

@@ -17,22 +17,15 @@ namespace ReceiveLogs
             {
                 using (var channel = connection.CreateModel())
                 {
-                    /* Topic exchange
-                     * * = Thay thể cho một chử
-                     * # = không có gì hoặc thay thế cho nhiều chữ
-                     */
                     channel.ExchangeDeclare("topic_logs", "topic");
 
                     var queueName = channel.QueueDeclare().QueueName;
 
-                    Console.WriteLine("Enter severity (severity,severity,...)");
-                    string severity = Console.ReadLine();
+                    Console.WriteLine("Enter binding key: ");
+                    string bindingKey = Console.ReadLine();
 
-                    foreach (string s in severity.Split(','))
+                    foreach (string s in bindingKey.Split(','))
                     {
-                        /* bind vào exchange nhửng routingKey này, nếu tin  nhắn gửi lên cho exchange mà có chứa
-                         * những key đã được binding thì sẻ gửi cho consummer này.
-                        */
                         channel.QueueBind(queueName, "topic_logs", s.Trim());
                     }
 

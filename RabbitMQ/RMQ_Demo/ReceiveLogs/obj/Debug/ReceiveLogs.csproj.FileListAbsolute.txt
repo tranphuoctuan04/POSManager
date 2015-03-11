@@ -7,3 +7,6 @@ C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\ReceiveLo
 C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\ReceiveLogs\obj\Debug\ReceiveLogs.csprojResolveAssemblyReference.cache
 C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\ReceiveLogs\obj\Debug\ReceiveLogs.exe
 C:\Users\TheSaboteur\documents\visual studio 2013\Projects\RMQ_Demo_01\ReceiveLogs\obj\Debug\ReceiveLogs.pdb
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\ReceiveLogs\bin\Debug\ReceiveLogs.exe.config
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\ReceiveLogs\obj\Debug\ReceiveLogs.exe
+C:\Users\TheSaboteur\Documents\Visual Studio 2013\Projects\RMQ_Demo\ReceiveLogs\obj\Debug\ReceiveLogs.pdb
